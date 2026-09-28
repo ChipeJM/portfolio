@@ -1,0 +1,28 @@
+{{- /* A relay dish on a truss mast, transmitting. The waves are centred on
+  the dish emitter: (0,-62) in dish space → (-26.2,-94.2) after the
+  translate(0 -38) rotate(-25) below. */ -}}
+<svg class="mega mega--beacon" viewBox="-160 -190 320 360" role="img" aria-label="Illustration of a relay antenna transmitting signals into space">
+  <defs>
+    <linearGradient id="beacon-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a2140"/>
+      <stop offset="1" stop-color="#04050b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g class="waves">
+    <circle class="wave" cx="-26.2" cy="-94.2" r="170"/>
+    <circle class="wave" cx="-26.2" cy="-94.2" r="170"/>
+    <circle class="wave" cx="-26.2" cy="-94.2" r="170"/>
+  </g>
+  <path class="ground" d="M-160 170C-60 128 60 128 160 170Z" fill="url(#beacon-ground)"/>
+  <path class="ln" d="M-160 170C-60 128 60 128 160 170"/>
+  <path class="ln ln--strong" d="M-36 140L0 -40L36 140"/>
+  <path class="ln" d="M-27 95H27M-18 50H18M-9 5H9"/>
+  <path class="ln ln--faint" d="M-36 140L27 95L-18 50L9 5"/>
+  <g transform="translate(0 -38) rotate(-25)">
+    <path class="ln ln--faint" d="M-58 -34L0 -58L58 -34"/>
+    <path class="ln ln--strong" d="M-58 -34Q0 30 58 -34"/>
+    <path class="ln ln--faint dashed" d="M-58 -34H58"/>
+    <path class="ln" d="M0 -2V-58"/>
+    <circle class="emitter" cx="0" cy="-62" r="4"/>
+  </g>
+</svg>

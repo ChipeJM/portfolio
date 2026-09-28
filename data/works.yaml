@@ -1,0 +1,124 @@
+# ──────────────────────────────────────────────────────────────
+#  Face 2 · Works
+#  Every fact below comes from the project's official report and
+#  source code. Screenshots live in assets/works/<project>/.
+#
+#  gallery.layout: "phone" (portrait app screens) or "wide" (16:9;
+#  the first image is shown large).
+#  `links` is optional; each link needs a label and a url.
+# ──────────────────────────────────────────────────────────────
+
+intro: >-
+  Two projects built at the University of Dodoma — a campus news app for
+  Android and a complete 2D zombie survival game.
+
+projects:
+  - title: UDOM Today
+    year: 2026
+    type: Android app
+    role: Co-creator · group project
+    summary: >-
+      Campus news at the University of Dodoma was scattered across notice
+      boards, the university website and dozens of WhatsApp groups.
+      UDOM Today puts it in one feed that students can filter by college,
+      search, and save to read offline.
+    highlights:
+      - >-
+        **Three roles.** Students read and save; entrusted reporters
+        publish, edit and delete their own articles with a cover image and
+        an optional short video; an admin promotes or demotes reporters
+        from inside the app.
+      - >-
+        **Server-side security.** A PHP and MySQL REST API issues random
+        login tokens and checks the caller's token and role before every
+        protected action.
+      - >-
+        **Smooth uploads.** Images are shrunk before upload, videos are
+        capped at 25 MB and 60 seconds, and one progress bar covers both
+        files.
+      - >-
+        **Offline reading.** Saved articles are stored on the phone with
+        Room and open without internet, pictures included.
+    facts:
+      - value: "3"
+        label: User roles
+      - value: "7"
+        label: UDOM colleges
+      - value: "14/14"
+        label: Tests passed
+      - value: "7.0+"
+        label: Android version
+    tags: [Java, Android SDK, MVVM, Retrofit2, Room, Glide, PHP, MySQL]
+    gallery:
+      layout: phone
+      images:
+        - src: works/udomtoday/01-login.jpg
+          caption: Login
+          alt: UDOM Today login screen with the app logo, username and password fields
+        - src: works/udomtoday/02-saved-news.jpg
+          caption: Saved news, read offline
+          alt: Saved News list with four articles tagged by college, each with a cover image
+        - src: works/udomtoday/03-article.jpg
+          caption: Article detail
+          alt: An article open in the detail screen with its college tag, title, cover photo and Save button
+        - src: works/udomtoday/04-new-post.jpg
+          caption: Reporter panel · new post
+          alt: Reporter panel New Post form with title, cover image, optional video and article body
+        - src: works/udomtoday/05-admin.jpg
+          caption: Admin · manage users
+          alt: Admin Manage Users screen listing accounts with their college, role and a Demote to Student button
+
+  - title: The Plague
+    year: 2026
+    type: PC game
+    role: Group project
+    summary: >-
+      A complete 2D side-scrolling zombie survival shooter for Windows,
+      built in Unity 6 with C#. A lone soldier fights waves of zombies
+      across three levels — a castle hall, a graveyard and a throne room —
+      each with its own zombie type and music.
+    highlights:
+      - >-
+        **Zombie AI.** Zombies notice the soldier, chase and attack it, with
+        a "leash" that stops them ever being left behind — so every level
+        can always be finished.
+      - >-
+        **Raycast shooting.** Shots are instant raycasts, replacing an
+        earlier bullet-object version that was costlier and could miss
+        between physics steps.
+      - >-
+        **One class, three difficulties.** Easy, Normal and Hard come from
+        a single settings class of five multipliers — no level had to be
+        duplicated.
+      - >-
+        **A finished game.** Main menu, pause menu, victory and death
+        screens, a live zombie counter, looping backgrounds, and volume and
+        difficulty settings saved between sessions.
+    facts:
+      - value: "3"
+        label: Levels
+      - value: "3"
+        label: Zombie types
+      - value: "3"
+        label: Difficulties
+      - value: "17"
+        label: C# scripts
+    tags: [Unity 6, C#, URP 2D, Input System, TextMeshPro, 2D Animation]
+    gallery:
+      layout: wide
+      images:
+        - src: works/the-plague/01-throne-room.jpg
+          caption: Level 3 · the throne room
+          alt: The soldier firing in a red throne room as one zombie falls and another approaches
+        - src: works/the-plague/02-castle-hall.jpg
+          caption: Level 1 · the castle hall
+          alt: The soldier firing his rifle and knocking back a green zombie in the castle hall
+        - src: works/the-plague/03-graveyard.jpg
+          caption: Level 2 · the graveyard
+          alt: The soldier facing the zombie girl in a graveyard, with the health bar and zombie counter visible
+        - src: works/the-plague/04-main-menu.jpg
+          caption: Main menu
+          alt: The Plague main menu with the subtitle The blight from europa and Start, Difficulty, Settings and Quit buttons
+        - src: works/the-plague/05-pause-menu.jpg
+          caption: Pause menu
+          alt: The pause menu with Resume, Main Menu and Settings over the dimmed graveyard level

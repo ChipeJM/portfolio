@@ -1,0 +1,20 @@
+# ──────────────────────────────────────────────────────────────
+#  Face 3 · Contact
+#  Add more channels by copying an entry (label, handle, url).
+# ──────────────────────────────────────────────────────────────
+
+heading: Let's build something together.
+
+intro: >-
+  Have a project in mind, an opportunity to share, or just want to say hi?
+  Open a channel — I usually reply within a day or two.
+
+email: cjmasaka@gmail.com
+
+channels:
+  - label: GitHub
+    handle: "@ChipeJM"
+    url: https://github.com/ChipeJM
+  - label: Instagram
+    handle: "@_c.h.i.p.e_"
+    url: https://www.instagram.com/_c.h.i.p.e_/

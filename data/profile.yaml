@@ -1,0 +1,45 @@
+# ──────────────────────────────────────────────────────────────
+#  Face 1 · Intro
+#  Everything below is sample text — replace it with your own.
+#  Longer text fields accept Markdown: **bold**, *italic*, [link](https://…)
+# ──────────────────────────────────────────────────────────────
+
+name: ChipeJM
+role: Cybersecurity expert & Software developer
+location: Earth · Sol System
+availability: Open to new projects
+
+tagline: >-
+  I design and build clean, fast digital things — websites, apps and tools
+  that feel as good to use as they look.
+
+about:
+  - >-
+    I'm a developer who lives where engineering meets design. I enjoy taking
+    an idea from a rough sketch to something polished that people actually
+    use — and I care about the details that make it feel right.
+  - >-
+    Most of my work lives on the web, but I'm happiest wherever there's an
+    interesting problem to solve: interfaces, animation, games, or the
+    systems quietly running underneath them.
+  - >-
+    When I'm not building, you'll find me reading about space, sketching
+    ideas, or picking up something new to learn.
+
+# Stats row — hidden while empty. To add some, replace [] with e.g.:
+#   - value: "3+"
+#     label: Years building
+stats: []
+
+skills:
+  - group: Languages
+    items: [JavaScript, TypeScript, Python, C#, HTML & CSS]
+  - group: Frameworks & tools
+    items: [React, Node.js, Hugo, Unity, Git]
+  - group: Design
+    items: [UI / UX, Figma, Motion, Prototyping]
+
+now:
+  - Building this portfolio with **Hugo**.
+  - Exploring 3D and motion on the web.
+  - Looking for interesting projects and collaborations.

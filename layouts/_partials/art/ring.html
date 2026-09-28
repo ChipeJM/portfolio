@@ -1,0 +1,44 @@
+{{- /* A ring megastructure around a star. Each ring is split into a far half
+  (drawn before the star) and a near half (drawn after it) so the star sits
+  inside the ring. */ -}}
+<svg class="mega mega--ring" viewBox="-220 -220 440 440" role="img" aria-label="Illustration of a ring-shaped megastructure encircling a star">
+  <defs>
+    <radialGradient id="ring-glow">
+      <stop offset="0" stop-color="#ffd28a" stop-opacity=".5"/>
+      <stop offset=".35" stop-color="#ff9f5a" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ff9f5a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ring-core">
+      <stop offset="0" stop-color="#fffaf0"/>
+      <stop offset=".5" stop-color="#ffe2a8"/>
+      <stop offset="1" stop-color="#ffb35c"/>
+    </radialGradient>
+  </defs>
+
+  <circle r="210" fill="url(#ring-glow)"/>
+
+  <g transform="rotate(-18)">
+    <path class="swarm swarm--far" d="M-205 0A205 58 0 0 1 205 0"/>
+    <path class="band band--far" d="M-160 0A160 42 0 0 1 160 0"/>
+    <path class="panels panels--far" d="M-160 0A160 42 0 0 1 160 0"/>
+  </g>
+  <g transform="rotate(32)">
+    <path class="orbit orbit--far" d="M-112 0A112 22 0 0 1 112 0"/>
+  </g>
+
+  <circle class="core" r="46" fill="url(#ring-core)"/>
+
+  <g transform="rotate(32)">
+    <path class="orbit" d="M-112 0A112 22 0 0 0 112 0"/>
+    <circle class="beacon" cx="0" cy="22" r="3"/>
+  </g>
+  <g transform="rotate(-18)">
+    <path class="band" d="M-160 0A160 42 0 0 0 160 0"/>
+    <path class="panels" d="M-160 0A160 42 0 0 0 160 0"/>
+    <path class="edge" d="M-160 0A160 42 0 0 0 160 0"/>
+    <circle class="light" cx="-92" cy="34.36" r="2.2"/>
+    <circle class="light" cx="60" cy="38.94" r="2.2"/>
+    <circle class="light" cx="138" cy="21.26" r="2.2"/>
+    <path class="swarm" d="M-205 0A205 58 0 0 0 205 0"/>
+  </g>
+</svg>

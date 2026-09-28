@@ -1,0 +1,12 @@
+baseURL = "https://chipejm.dev/"
+locale = "en"
+title = "ChipeJM.dev"
+
+# The whole site is a single page (a three-faced cube), so the extra
+# page kinds Hugo generates by default are switched off.
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404", "section", "page"]
+
+[params]
+  # Shown in the header, footer and browser tab.
+  brand = "ChipeJM.dev"
+  description = "ChipeJM.dev — the portfolio of ChipeJM: works, achievements and ways to get in touch."

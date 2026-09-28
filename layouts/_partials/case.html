@@ -1,0 +1,74 @@
+{{- /* A project shown as a case study: write-up, key facts and a screenshot
+  gallery. Screenshots are resized to WebP; each one links to its full-size
+  version, which main.js opens in the lightbox (without JavaScript the link
+  simply opens the image). */ -}}
+{{- $p := .project }}
+{{- $out := .out }}
+{{- $layout := $p.gallery.layout | default "wide" }}
+<li class="project case case--{{ $layout }} reveal">
+  <div class="case-copy">
+    <div class="case-main">
+      <p class="project-meta">
+        {{- with $p.year }}<span>{{ . }}</span>{{ end }}
+        {{- with $p.type }}<span>{{ . }}</span>{{ end -}}
+      </p>
+      <h3 class="case-title">{{ $p.title }}</h3>
+      {{- with $p.role }}<p class="case-role">{{ . }}</p>{{ end }}
+      {{- with $p.summary }}<p class="case-summary">{{ . | markdownify }}</p>{{ end }}
+      {{- with $p.highlights }}
+      <ul class="case-highlights">
+        {{- range . }}<li>{{ . | markdownify }}</li>{{ end }}
+      </ul>
+      {{- end }}
+    </div>
+    <div class="case-side">
+      {{- with $p.facts }}
+      <dl class="case-facts">
+        {{- range . }}
+        <div class="case-fact"><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+        {{- end }}
+      </dl>
+      {{- end }}
+      {{- with $p.tags }}
+      <ul class="tags" aria-label="Built with">
+        {{- range . }}<li>{{ . }}</li>{{ end }}
+      </ul>
+      {{- end }}
+      {{- with $p.links }}
+      <p class="project-links">
+        {{- range . }}
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }} {{ $out }}</a>
+        {{- end }}
+      </p>
+      {{- end }}
+    </div>
+  </div>
+
+  <ul class="case-gallery case-gallery--{{ $layout }}" aria-label="{{ $p.title }} screenshots">
+    {{- range $i, $img := $p.gallery.images }}
+    {{- $src := resources.Get $img.src }}
+    {{- if not $src }}{{ errorf "case.html: screenshot %q not found in assets/" $img.src }}{{ end }}
+    {{- $full := "" }}{{ $small := "" }}{{ $sizes := "" }}
+    {{- if eq $layout "phone" }}
+      {{- $full = $src.Resize (printf "%dx webp q85" $src.Width) }}
+      {{- $small = $src.Resize "300x webp q82" }}
+      {{- $sizes = "(max-width: 520px) 45vw, (max-width: 860px) 30vw, 200px" }}
+    {{- else }}
+      {{- $full = $src.Resize (printf "%dx webp q85" $src.Width) }}
+      {{- $small = $src.Resize "640x webp q82" }}
+      {{- $sizes = cond (eq $i 0) "(max-width: 1120px) 92vw, 1000px" "(max-width: 640px) 45vw, 240px" }}
+    {{- end }}
+    <li><a class="shot" href="{{ $full.RelPermalink }}" data-caption="{{ $img.caption }}" data-count="{{ add $i 1 }} / {{ len $p.gallery.images }}">
+      <span class="shot-frame">
+        <img src="{{ $small.RelPermalink }}"
+             srcset="{{ $small.RelPermalink }} {{ $small.Width }}w, {{ $full.RelPermalink }} {{ $full.Width }}w"
+             sizes="{{ $sizes }}"
+             width="{{ $small.Width }}" height="{{ $small.Height }}"
+             alt="{{ $img.alt }}" loading="lazy" decoding="async">
+        <span class="shot-zoom" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" focusable="false"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span>
+      </span>
+      {{- with $img.caption }}<span class="shot-caption">{{ . }}</span>{{ end }}
+    </a></li>
+    {{- end }}
+  </ul>
+</li>
