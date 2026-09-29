@@ -2,11 +2,23 @@ baseURL = "https://chipejm.dev/"
 locale = "en"
 title = "ChipeJM.dev"
 
+# Writes robots.txt (from layouts/robots.txt), pointing crawlers at the sitemap.
+enableRobotsTXT = true
+
 # The whole site is a single page (a three-faced cube), so the extra
-# page kinds Hugo generates by default are switched off.
-disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404", "section", "page"]
+# page kinds Hugo generates by default are switched off. The sitemap
+# stays on so search engines can find the page.
+disableKinds = ["taxonomy", "term", "RSS", "404", "section", "page"]
 
 [params]
   # Shown in the header, footer and browser tab.
   brand = "ChipeJM.dev"
-  description = "ChipeJM.dev — the portfolio of ChipeJM: works, achievements and ways to get in touch."
+  description = "ChipeJM.dev — the portfolio of Chipegwa Masaka (ChipeJM), a cybersecurity student and software developer at the University of Dodoma, Tanzania."
+
+  # Search engines and link previews. seo_title is the browser tab and
+  # search-result title; author feeds the Person structured data.
+  seo_title = "Chipegwa Masaka (ChipeJM) — Cybersecurity Student & Software Developer"
+  author = "Chipegwa Masaka"
+  alternate_name = "ChipeJM"
+  job_title = "Cybersecurity student & Software developer"
+  school = "University of Dodoma"

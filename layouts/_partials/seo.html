@@ -1,0 +1,34 @@
+{{- /* Search-engine and link-preview tags for the single home page. */ -}}
+{{- $title := site.Params.seo_title | default site.Title -}}
+{{- $description := site.Params.description -}}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<meta name="author" content="{{ site.Params.author }}">
+<link rel="canonical" href="{{ .Permalink }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+
+{{- /* Person structured data; sameAs lists the profiles from data/contact.yaml. */ -}}
+{{- $sameAs := slice -}}
+{{- range hugo.Data.contact.channels }}{{ $sameAs = $sameAs | append .url }}{{ end -}}
+{{- $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" site.Params.author
+  "alternateName" site.Params.alternate_name
+  "jobTitle" site.Params.job_title
+  "description" $description
+  "url" .Permalink
+  "email" (printf "mailto:%s" hugo.Data.contact.email)
+  "affiliation" (dict "@type" "CollegeOrUniversity" "name" site.Params.school)
+  "sameAs" $sameAs
+}}
+<script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
