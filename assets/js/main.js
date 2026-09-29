@@ -556,6 +556,7 @@
     const nextBtn = lightbox.querySelector('.lightbox-next');
     let shots = [];
     let current = 0;
+    let opener = null;
 
     const show = (i) => {
       current = (i + shots.length) % shots.length;
@@ -583,6 +584,7 @@
       const gallery = shot.closest('.case-gallery');
       shots = gallery ? Array.from(gallery.querySelectorAll('.shot')) : [shot];
       lightbox.classList.toggle('is-phone', !!(gallery && gallery.classList.contains('case-gallery--phone')));
+      opener = shot;
       show(shots.indexOf(shot));
       lightbox.showModal();
     });
@@ -625,6 +627,10 @@
 
     lightbox.addEventListener('close', () => {
       img.removeAttribute('src');
+      // Browsers that don't focus links on click (Safari) would otherwise
+      // drop focus at the top of the page.
+      if (opener) opener.focus({ preventScroll: true });
+      opener = null;
     });
   }
 

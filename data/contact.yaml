@@ -3,11 +3,11 @@
 #  Add more channels by copying an entry (label, handle, url).
 # ──────────────────────────────────────────────────────────────
 
-heading: Let's build something together.
+heading: Let's learn and build together.
 
 intro: >-
-  Have a project in mind, an opportunity to share, or just want to say hi?
-  Open a channel — I usually reply within a day or two.
+  Have an internship, a project or a learning opportunity to share — or
+  just want to say hi? Open a channel and I'll get back to you.
 
 email: cjmasaka@gmail.com
 
@@ -15,6 +15,9 @@ channels:
   - label: GitHub
     handle: "@ChipeJM"
     url: https://github.com/ChipeJM
+  - label: LinkedIn
+    handle: Chipegwa Masaka
+    url: https://www.linkedin.com/in/chipegwa-masaka-224851405/
   - label: Instagram
     handle: "@_c.h.i.p.e_"
     url: https://www.instagram.com/_c.h.i.p.e_/

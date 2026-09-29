@@ -1,30 +1,36 @@
 # ──────────────────────────────────────────────────────────────
 #  Face 1 · Intro
-#  Everything below is sample text — replace it with your own.
 #  Longer text fields accept Markdown: **bold**, *italic*, [link](https://…)
 # ──────────────────────────────────────────────────────────────
 
 name: ChipeJM
-role: Cybersecurity expert & Software developer
-location: Earth · Sol System
-availability: Open to new projects
+role: Cybersecurity student & Software developer
+location: University of Dodoma · Tanzania
+availability: Open to internships & collaborations
 
 tagline: >-
-  I design and build clean, fast digital things — websites, apps and tools
-  that feel as good to use as they look.
+  I build software as I study — Android apps, games and the servers behind
+  them — at the University of Dodoma.
+
+# Optional second intro paragraph, shown right under the tagline.
+tagline_more: >-
+  I am also a prominent student in cybersecurity, exploring the frontier
+  and ever pushing forward to more knowledge to enhance my craft.
 
 about:
   - >-
-    I'm a developer who lives where engineering meets design. I enjoy taking
-    an idea from a rough sketch to something polished that people actually
-    use — and I care about the details that make it feel right.
+    I'm a student at the University of Dodoma, where I study cybersecurity
+    and build software alongside my coursework. Most of what I know comes
+    from projects that had to actually work, not just pass an exam.
   - >-
-    Most of my work lives on the web, but I'm happiest wherever there's an
-    interesting problem to solve: interfaces, animation, games, or the
-    systems quietly running underneath them.
+    Building apps and games has taught me how software is put together —
+    and where it can break. In **UDOM Today** that meant login tokens and a
+    server that checks every user's role before it acts. Those details are
+    exactly what I want to keep getting better at.
   - >-
-    When I'm not building, you'll find me reading about space, sketching
-    ideas, or picking up something new to learn.
+    For now my focus is growing as a student: deepening my security
+    knowledge, sharpening my development skills, and learning from people
+    and projects in the real world.
 
 # Stats row — hidden while empty. To add some, replace [] with e.g.:
 #   - value: "3+"
@@ -33,13 +39,13 @@ stats: []
 
 skills:
   - group: Languages
-    items: [JavaScript, TypeScript, Python, C#, HTML & CSS]
-  - group: Frameworks & tools
-    items: [React, Node.js, Hugo, Unity, Git]
-  - group: Design
-    items: [UI / UX, Figma, Motion, Prototyping]
+    items: [Java, C#, PHP, SQL]
+  - group: Platforms & tools
+    items: [Android SDK, Unity, MySQL, Git & GitHub]
+  - group: Security in practice
+    items: [Token authentication, Role-based access, Server-side checks]
 
 now:
-  - Building this portfolio with **Hugo**.
-  - Exploring 3D and motion on the web.
-  - Looking for interesting projects and collaborations.
+  - Studying cybersecurity at the **University of Dodoma**.
+  - Looking for **internships** and collaborations to learn from real projects.
+  - Keeping this portfolio up to date as I learn and build.

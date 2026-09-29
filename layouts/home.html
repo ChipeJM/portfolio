@@ -38,6 +38,9 @@
               <h1 class="hero-name reveal" id="intro-title"><span class="hero-hi">Hi, I'm</span> <span class="glow">{{ $p.name }}</span></h1>
               <p class="hero-role reveal">{{ $p.role }}</p>
               <p class="hero-tagline reveal">{{ $p.tagline | markdownify }}</p>
+              {{- with $p.tagline_more }}
+              <p class="hero-tagline reveal">{{ . | markdownify }}</p>
+              {{- end }}
               <p class="hero-meta reveal">
                 {{- with $p.availability }}<span class="status"><span class="status-dot" aria-hidden="true"></span>{{ . }}</span>{{ end }}
                 {{- with $p.location }}<span class="hero-loc">{{ . }}</span>{{ end -}}
