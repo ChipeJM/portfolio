@@ -5,6 +5,9 @@
 <meta name="description" content="{{ $description }}">
 <meta name="author" content="{{ site.Params.author }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{- with site.Params.google_site_verification }}
+<meta name="google-site-verification" content="{{ . }}">
+{{- end }}
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ site.Title }}">

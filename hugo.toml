@@ -22,3 +22,6 @@ disableKinds = ["taxonomy", "term", "RSS", "404", "section", "page"]
   alternate_name = "ChipeJM"
   job_title = "Cybersecurity student & Software developer"
   school = "University of Dodoma"
+
+  # Google Search Console ownership check (HTML tag method).
+  google_site_verification = "NqfYytO-xGFmnT3JMP_UN6ci50tgSHpUBMpcietS0qE"
