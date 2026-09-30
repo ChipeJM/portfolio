@@ -9,7 +9,7 @@
 # ──────────────────────────────────────────────────────────────
 
 intro: >-
-  Two group projects from my studies at the University of Dodoma — a
+  Two group projects from my studies at the University of Dodoma: a
   campus news app for Android and a complete 2D zombie survival game.
 
 projects:
@@ -57,10 +57,10 @@ projects:
           alt: UDOM Today login screen with the app logo, username and password fields
         - src: works/udomtoday/02-saved-news.jpg
           caption: Saved news, read offline
-          alt: Saved News list with four articles tagged by college, each with a cover image
+          alt: Saved News list with three articles from COED, CHAS and CNMS, including an internship opportunity at Benjamin Mkapa Hospital
         - src: works/udomtoday/03-article.jpg
           caption: Article detail
-          alt: An article open in the detail screen with its college tag, title, cover photo and Save button
+          alt: The CyberHer Africa Challenge article open in the detail screen with its CIVE tag, date, cover image, full text and Save button
         - src: works/udomtoday/04-new-post.jpg
           caption: Reporter panel · new post
           alt: Reporter panel New Post form with title, cover image, optional video and article body
@@ -75,12 +75,12 @@ projects:
     summary: >-
       A complete 2D side-scrolling zombie survival shooter for Windows,
       built in Unity 6 with C#. A lone soldier fights waves of zombies
-      across three levels — a castle hall, a graveyard and a throne room —
+      across three levels (a castle hall, a graveyard and a throne room),
       each with its own zombie type and music.
     highlights:
       - >-
         **Zombie AI.** Zombies notice the soldier, chase and attack it, with
-        a "leash" that stops them ever being left behind — so every level
+        a "leash" that stops them ever being left behind, so every level
         can always be finished.
       - >-
         **Raycast shooting.** Shots are instant raycasts, replacing an
@@ -88,7 +88,7 @@ projects:
         between physics steps.
       - >-
         **One class, three difficulties.** Easy, Normal and Hard come from
-        a single settings class of five multipliers — no level had to be
+        a single settings class of five multipliers, so no level had to be
         duplicated.
       - >-
         **A finished game.** Main menu, pause menu, victory and death
